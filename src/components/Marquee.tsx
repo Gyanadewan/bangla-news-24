@@ -10,7 +10,7 @@ import "react-marquee-text/dist/styles.css"
   const data = await res.json()
   const headlines:Headlines[] = data.data
   return (
-    <div className=" bg-red-700 text-white ">
+     <div className=" bg-red-700 text-white ">
        <div className="flex container mx-auto">
          <div className="bg-red-500 py-1 px-5 font-bold">সর্বশেষ</div>
           <MarqueeText className="py-1" direction="right" duration={10}>
@@ -22,8 +22,7 @@ import "react-marquee-text/dist/styles.css"
             </span>) 
         }
           </MarqueeText>
-       </div>
-       
+       </div>  
     </div>
   )
 } 
