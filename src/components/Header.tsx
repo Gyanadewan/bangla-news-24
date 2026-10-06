@@ -9,8 +9,8 @@ function Header() {
           <div className="flex justify-between ">
         <div className="flex gap-2 ">
          <Image
-          width={30}
-          height={30}
+          width={40}
+          height={20}
           src="/logo.webp"
           alt="Logo"
         />
@@ -20,8 +20,8 @@ function Header() {
         </div>
         </div>
        <div className="flex gap-5">
-          <button className="btn">Sign In</button>
-         <button className="btn bg-red-400 text-white">Sign Up</button>
+          <button className="btn">সাইন ইন</button>
+         <button className="btn bg-red-400 text-white">সাইন আপ</button>
        </div>
            
     </div>

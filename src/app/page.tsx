@@ -1,13 +1,12 @@
-import Image from "next/image";
 
-export default function Home() {
-  return (
-      <div>
-           <h1>ঢাকায় খোঁজ নিয়ে জানা গেছে, নতুন ঋণ কর্মসূচির জন্য বাংলাদেশের দিক থেকে
-             গত জুনে যে প্রস্তাব দেওয়া হয়েছে সেটি পেতে হলে আইএমএফ- এর চারটি শর্ত বাংলাদেশকে 
-             বাস্তবায়নের মাধ্যমে সংস্কারে দৃঢ়তা দেখাতে হবে। যদিও এ বছর বাজেটেই বলা হয়েছে, সরকার
-              প্রথম দুই বছরে বড় কোনো
-             সংস্কারে যেতে চায় না। ফলে আইএমএফ নিয়ে আসলে কী হতে যাচ্ছে?</h1>
-      </div>
-  );
+import Marquee from "@/components/Marquee"
+function HomePage() {
+  return ( 
+    <div>
+      <Marquee></Marquee>
+    </div>
+  )
 }
+
+export default HomePage
+
