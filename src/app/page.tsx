@@ -1,6 +1,7 @@
 
 import MainNews from "@/components/MainNews"
 import Marquee from "@/components/Marquee"
+import MostRead from "@/components/MostRead"
 import NewsCard from "@/components/NewsCard"
 interface IotherSection {
    title: string
@@ -39,8 +40,8 @@ interface IotherSection {
                }
             </div>
            </div>
-           <div className="bg-green-400 col-span-1 p-10">
-             dhdh
+           <div className= " grid gap-5 col-span-1 px-5 py-2">
+              <MostRead></MostRead>
 
            </div>
        </div>
