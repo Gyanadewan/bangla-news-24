@@ -17,7 +17,7 @@ interface Navs {
     <div className="flex gap-5 justify-center">
       <Link href={"/"}>হোম</Link>
         {
-            filterNavs.map ((n,i) => <Link key={i} href={n.slug}>{n.title}</Link>)
+            filterNavs.map ((n,i) => <Link key={i} href={`/category/${n.slug}`}>{n.title}</Link>)
         }
     </div>
   )

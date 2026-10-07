@@ -22,7 +22,6 @@ interface IotherSection {
   console.log(otherSections)
   return ( 
     <div>
-      <Marquee></Marquee>
        <div className="grid  grid-cols-3 container mx-auto">
            <div className=" col-span-2">
             <MainNews mainNews= {mainNews}></MainNews>
