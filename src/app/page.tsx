@@ -1,6 +1,5 @@
 
 import MainNews from "@/components/MainNews"
-import Marquee from "@/components/Marquee"
 import MostRead from "@/components/MostRead"
 import NewsCard from "@/components/NewsCard"
 interface IotherSection {
