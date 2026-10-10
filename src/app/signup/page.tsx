@@ -24,9 +24,21 @@ function SignUpPage() {
       
   }
 
+ const handleSignInGoogle = async() => {
+   const data = await authClient.signIn.social({
+    provider: "google",
+  });
+    // console.log(data)
+ }
+ const handleSignInGithub = async () => {
+    const data = await authClient.signIn.social({
+        provider: "github"
+    })
+}
+
   return (
-      <div  className="flex justify-center">
-   <form onSubmit={handleSubmit}>
+    <div className="">
+   <form className="flex justify-center" onSubmit={handleSubmit}>
      <fieldset  className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
   <label className="label">Name</label>
   <input name="name" type="text" className="input" placeholder="Name" />
@@ -41,6 +53,12 @@ function SignUpPage() {
   <button type="submit" className="btn btn-neutral mt-4">সাইন আপ করুন</button>
 </fieldset>
    </form>
+     <div className="text-center my-5">
+        <button onClick={handleSignInGoogle} className="btn bg-red-400 text-white"> sign in with google</button>
+     </div>
+     <div className="text-center ">
+        <button onClick={handleSignInGithub} className="btn bg-amber-900 text-white" > sign in with Github</button>
+     </div>
     </div>
   )
 }
