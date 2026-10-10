@@ -21,8 +21,10 @@ async function page({
   );
 
   const data = await res.json();
+ 
 
   const categoriesNews: ICategory[] = data.data;
+  console.log(categoriesNews)
 
   return (
     <div className="container mx-auto">

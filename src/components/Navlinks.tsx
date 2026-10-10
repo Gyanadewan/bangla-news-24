@@ -14,7 +14,7 @@ interface Navs {
     const navs:Navs [] = data.data
     const filterNavs = navs.filter(n=>n.scrapable)
   return (
-    <div className="flex gap-5 justify-center">
+    <div className="flex gap-5 justify-center border  border-gray-400 rounded-3xl p-2">
       <Link href={"/"}>হোম</Link>
         {
             filterNavs.map ((n,i) => <Link key={i} href={`/category/${n.slug}`}>{n.title}</Link>)

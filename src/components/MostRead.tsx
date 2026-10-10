@@ -7,7 +7,6 @@ interface ImostreadNews {
     const res = await fetch ("https://news-api-v2.vercel.app/api/news/most-read")
     const data = await res.json()
     const news:ImostreadNews[] = data.data
-    console.log(news)
   return (
         <div className="bg-base-200 shawdow-md p-2">
              <h1 className="font-semibold text-red-600">সর্বাধিক</h1>
