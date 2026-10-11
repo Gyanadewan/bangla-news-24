@@ -21,7 +21,21 @@ function SignInPage() {
         }
         
     }
+    
+ const handleSignInGoogle = async() => {
+  await authClient.signIn.social({
+    provider: "google",
+  });
+    // console.log(data)
+ }
+ const handleSignInGithub = async () => {
+    await authClient.signIn.social({
+        provider: "github"
+    })
+}
+
   return (
+    <div className="">
      <form onSubmit={handleSubmit} action="">
 
        <div className="flex justify-center">
@@ -37,6 +51,11 @@ function SignInPage() {
 </fieldset>
     </div>
      </form>
+       <div className=" my-5 flex justify-center gap-5">
+        <button onClick={handleSignInGoogle} className="btn bg-red-400 text-white"> sign in with google</button>
+        <button onClick={handleSignInGithub} className="btn bg-amber-900 text-white" > sign in with Github</button>
+     </div>
+      </div>
   )
 }
 

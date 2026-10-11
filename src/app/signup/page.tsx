@@ -24,18 +24,6 @@ function SignUpPage() {
       
   }
 
- const handleSignInGoogle = async() => {
-   const data = await authClient.signIn.social({
-    provider: "google",
-  });
-    // console.log(data)
- }
- const handleSignInGithub = async () => {
-    const data = await authClient.signIn.social({
-        provider: "github"
-    })
-}
-
   return (
     <div className="">
    <form className="flex justify-center" onSubmit={handleSubmit}>
@@ -53,12 +41,6 @@ function SignUpPage() {
   <button type="submit" className="btn btn-neutral mt-4">সাইন আপ করুন</button>
 </fieldset>
    </form>
-     <div className="text-center my-5">
-        <button onClick={handleSignInGoogle} className="btn bg-red-400 text-white"> sign in with google</button>
-     </div>
-     <div className="text-center ">
-        <button onClick={handleSignInGithub} className="btn bg-amber-900 text-white" > sign in with Github</button>
-     </div>
     </div>
   )
 }

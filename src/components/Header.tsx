@@ -4,7 +4,6 @@ import UserInfo from "./UserInfo";
 
 function Header() {
  const date = new Date().toLocaleDateString("bn-BD")
- console.log(date);
   return (
    <header className=" my-3">
           <div className="flex justify-between container mx-auto ">

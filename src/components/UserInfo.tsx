@@ -16,11 +16,13 @@ function UserInfo() {
     <div>
       {user ? (
         <div className="flex items-center gap-5">
-          <div className="avatar">
+        <Link href={"/profile"}>
+            <div className="avatar">
   <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
     <img alt="Tailwind-CSS-Avatar-component" src={user.image || "/default-avatar.png"} />
   </div>
 </div>
+        </Link>
           <span className="text-blue-600">{user.name}</span>
 
           <button
