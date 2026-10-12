@@ -33,8 +33,16 @@ function MainNews({mainNews}:{mainNews:News[]}) {
      { 
         otherNews.slice(0,4).map(othernew=> <div key={othernew.id} className="border border-gray-300 bg-base-100 py-5 px-5">
             <div className=" ">
-              <p className="text-red-600 font-semibold">{firstNews.category}</p>
+              <p className="text-red-600 font-semibold">{othernew.category}</p>
                 <h2>{othernew.title}</h2> 
+                 <figure>
+             <Image
+           src={othernew.imageUrl}
+          alt={othernew.imageAlt}
+           width={500}
+         height={300}
+            />
+         </figure>
             </div>
         </div>)
      }
