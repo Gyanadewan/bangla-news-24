@@ -30,7 +30,13 @@ interface IotherSection {
                    <h2 className="font-bold">{os.title}</h2>
                   <div className="grid grid-cols-3 gap-3 border border-b-2 border-red-600 pb-1">
                       {
-                      os.articles.map((news) => <NewsCard key={news.id} news={news}></NewsCard>)
+                      os.articles.map((news) => <NewsCard key={news.id} news={{
+                    id: news.id,
+                    imageUrl: news.image_url,
+                    imageAlt: news.description,
+                    category: os.title,
+                    description: news.description,
+                      }}></NewsCard>)
 
                     }
                   </div>

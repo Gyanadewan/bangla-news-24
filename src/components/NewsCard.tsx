@@ -16,7 +16,7 @@ function NewsCard({news}:{news:INews}) {
         <figure>
           <Image
         src={news.imageUrl}
-        alt={news.imageAlt}
+        alt={news.description}
         width={600}
         height={600}
       />
