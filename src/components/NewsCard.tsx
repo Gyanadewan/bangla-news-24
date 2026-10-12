@@ -1,3 +1,4 @@
+
 import Image from "next/image"
 import Link from "next/link"
 interface INews {
@@ -8,18 +9,19 @@ interface INews {
   description: string
 }
 function NewsCard({news}:{news:INews}) {
-
+        // console.log(news)
   return (
     <div>
        <Link href={`/news/${news.id}`}>
            <div className="card bg-base-100  shadow-sm">
         <figure>
-          <Image
-        src={news.imageUrl}
-        alt={news.description}
-        width={600}
-        height={600}
-      />
+             <Image
+    src={news.imageUrl}
+    alt={news.imageAlt || news.description || "সংবাদের ছবি"}
+    width={600}
+    height={600}
+     >
+     </Image>
         </figure>
         <div className="card-body">
           <p className="text-red-600 font-semibold">{news.category}</p>

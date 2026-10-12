@@ -6,8 +6,9 @@ interface IotherSection {
    title: string
    curationId: string
   articles: {
-  image_url: string
+  imageUrl: string
   description: string
+  imageAlt: string
   published_at: string
     id: string
   }[]
@@ -18,7 +19,7 @@ interface IotherSection {
   const sections = data.data
   const mainNews = sections[0].articles
   const otherSections:IotherSection[] = sections.slice(1)
-  console.log(otherSections)
+  // console.log(otherSections)
   return ( 
     <div>
        <div className="grid  grid-cols-3 container mx-auto">
@@ -32,8 +33,8 @@ interface IotherSection {
                       {
                       os.articles.map((news) => <NewsCard key={news.id} news={{
                     id: news.id,
-                    imageUrl: news.image_url,
-                    imageAlt: news.description,
+                    imageUrl: news.imageUrl,
+                    imageAlt: news.imageAlt,
                     category: os.title,
                     description: news.description,
                       }}></NewsCard>)
