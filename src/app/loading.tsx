@@ -5,7 +5,7 @@ function LoadingPage() {
    <div className="flex min-h-screen flex-col items-center justify-center gap-4">
 <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"></div>
 
-  <h2 className="text-xl font-semibold">
+  <h2 className="text-xl font-bold">
     লোড হচ্ছে.....
   </h2>
 
