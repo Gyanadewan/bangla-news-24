@@ -1,4 +1,5 @@
 import NewsCard from "@/components/NewsCard";
+import { notFound } from "next/navigation";
 
 interface ICategory {
   id: string;
@@ -24,7 +25,9 @@ async function page({
  
 
   const categoriesNews: ICategory[] = data.data;
-  console.log(categoriesNews)
+  if (!categoriesNews){
+    notFound()
+  }
 
   return (
     <div className="container mx-auto">

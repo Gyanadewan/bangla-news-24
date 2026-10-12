@@ -1,4 +1,6 @@
+
 import Image from "next/image"
+import { notFound } from "next/navigation";
 interface IDetails {
   id: string;
   title: string;
@@ -7,11 +9,14 @@ interface IDetails {
   tags: string[];
 }
 
-async function page({params}:{params:{newsId:string}}) {
+async function NewsDetailsPpage({params}:{params:{newsId:string}}) {
     const {newsId} = await params
     const res = await fetch (`https://news-api-v2.vercel.app/api/article/${newsId}`)
     const data = await res.json()
     const details: IDetails = data.data
+    if (!details){
+      notFound()
+    }
   return (
     <div className="container mx-auto p-3">
          <h3 className="font-semibold text-2xl">{details.title}</h3>
@@ -31,4 +36,4 @@ async function page({params}:{params:{newsId:string}}) {
   )
 }
 
-export default page
+export default NewsDetailsPpage
